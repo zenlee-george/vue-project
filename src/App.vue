@@ -1,30 +1,73 @@
+<!-- <template>
+  <div class="wrapper">
+    <main class="container-fluid">
+      
+      
+
+      
+    </main>
+  </div>
+  
+</template> -->
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="wrapper">
+    <NavBar/>
+    <main>
+      <section id="home">
+        <HomeSection/>
+      </section>
+      <!-- <section id="about">
+        <div class="container pt-5">
+          <AboutSection :about="about" :hobbies="hobbies"/>
+        </div>
+      </section> -->
+      <!-- <section id="resume">
+        <resume-section :education="education"/>
+      </section> -->
+      <section id="projects">
+      </section>
+      <section id="testimonials"></section>
+      <section id="contact"></section>
+    </main>
+    <Footer/>
+  </div>
 </template>
 
+<script>
+import NavBar from '@/components/NavbarComp.vue'
+// import Footer from '@/components/FooterComp.vue'
+// import HomeSection from '@/components/HomeSection.vue'
+// import AboutSection from '@/components/AboutSection.vue'
+// import ResumeSection from '@/components/ResumeSection.vue'
+
+export default {
+  computed: { 
+    about() {
+      return this.$store.state.aboutMe
+    },
+    hobbies() {
+      return this.$store.state.hobbies
+    },
+    education () {
+      return this.$store.state.education
+    }
+  },
+  components: {
+    NavBar,
+    // Footer,
+    // HomeSection,
+    // AboutSection,
+    // ResumeSection
+  },
+  mounted() {
+    this.$store.dispatch('getAboutMe'),
+    this.$store.dispatch('getHobbies'),
+    this.$store.dispatch('getEducation')
+  }
+}
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
