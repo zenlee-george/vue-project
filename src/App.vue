@@ -1,73 +1,31 @@
-<!-- <template>
-  <div class="wrapper">
-    <main class="container-fluid">
-      
-      
-
-      
-    </main>
-  </div>
-  
-</template> -->
-
 <template>
-  <div class="wrapper">
-    <NavBar/>
+<NoiseFilter/>
+     <NavBar/>
     <main>
-      <section id="home">
-        <HomeSection/>
-      </section>
-      <!-- <section id="about">
-        <div class="container pt-5">
-          <AboutSection :about="about" :hobbies="hobbies"/>
-        </div>
-      </section> -->
-      <!-- <section id="resume">
-        <resume-section :education="education"/>
-      </section> -->
-      <section id="projects">
-      </section>
-      <section id="testimonials"></section>
-      <section id="contact"></section>
+      <router-view/>
+      
     </main>
     <Footer/>
-  </div>
+  
 </template>
+
+
 
 <script>
 import NavBar from '@/components/NavbarComp.vue'
-// import Footer from '@/components/FooterComp.vue'
-// import HomeSection from '@/components/HomeSection.vue'
-// import AboutSection from '@/components/AboutSection.vue'
-// import ResumeSection from '@/components/ResumeSection.vue'
+import Footer from '@/components/FooterComp.vue'
+import NoiseFilter from '@/components/NoiseFilter.vue';
 
 export default {
-  computed: { 
-    about() {
-      return this.$store.state.aboutMe
-    },
-    hobbies() {
-      return this.$store.state.hobbies
-    },
-    education () {
-      return this.$store.state.education
-    }
-  },
+  
   components: {
     NavBar,
-    // Footer,
-    // HomeSection,
-    // AboutSection,
-    // ResumeSection
-  },
-  mounted() {
-    this.$store.dispatch('getAboutMe'),
-    this.$store.dispatch('getHobbies'),
-    this.$store.dispatch('getEducation')
+    Footer,
+    NoiseFilter,
   }
 }
 </script>
 
-
-<style>
+<style src="./assets/css/styles.css">
 </style>
+

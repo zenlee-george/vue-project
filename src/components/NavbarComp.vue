@@ -63,9 +63,9 @@
   
   <style scoped>
   .nav-link {
-    color: #000;
+    color: #fff;
   }
   .nav-link:hover {
-    color: #fff;
+    color: #000;
   }
   </style>
