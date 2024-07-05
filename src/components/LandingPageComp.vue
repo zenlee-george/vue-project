@@ -5,22 +5,31 @@
       data-offset="-50"
       id="home"
     >
-      <p class="home-social" data-aos="fade-up">
+      <p class="home-social" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0">
         <a
           href="https://www.linkedin.com/in/zen-george-674a91317/"
           target="_blank"
         >Linkedin</a>
         <a href="https://github.com/zenlee-george" target="_blank">Github</a>
       </p>
-      <p class="name" data-aos="fade-up">
+      <p class="name" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0">
         Portfolio of <br />
-        Ronald <br />
-        Terblanche
+        Zen Lee <br />
+        George
       </p>
-      <p data-aos="fade-up">
+      <p data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0">
         Aspiring <br />
-        Full Stack Developer
-      </p>
+        Fullstack Developer
+</p>
     </div>
   </template>
   
@@ -32,10 +41,11 @@
     name: 'HomeSection',
     mounted() {
       AOS.init({
-        duration: 2000, 
+        duration: 1200, 
         once: false, 
       });
     },
+   
   };
   </script>
   
