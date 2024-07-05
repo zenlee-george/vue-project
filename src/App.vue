@@ -1,10 +1,8 @@
 <template>
 <NoiseFilter/>
      <NavBar/>
-     <LandingPageComp/>
     <main>
       <router-view/>
-      
     </main>
     <Footer/>
   
@@ -15,13 +13,11 @@
 <script>
 import NavBar from '@/components/NavbarComp.vue'
 import NoiseFilter from '@/components/NoiseFilter.vue';
-import LandingPageComp from './components/LandingPageComp.vue';
 import Footer from '@/components/FooterComp.vue'
 
 export default {
   
   components: {
-    LandingPageComp,
     NavBar,
     NoiseFilter,
     Footer,
