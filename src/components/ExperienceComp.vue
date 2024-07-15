@@ -56,8 +56,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
   .exp-heading {
-  color: #89ff00;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px #00bcd4;
+    color: orangered;
+    text-shadow: 2px 2px 4px #000, 5px 5px 70px yellow;
 }
   
   .timeline {
@@ -166,7 +166,7 @@
     border: 3px solid;
     border-image-slice: 1;
     border-width: 3px;
-    border-image-source:  linear-gradient(235deg, #89ff00, #b6b2b2, #89ff00);
+    border-image-source:  linear-gradient(235deg, orangered, #b6b2b2, green);
     width: 400px;
     box-shadow: 0 0 10px #00bcd4;
   }
