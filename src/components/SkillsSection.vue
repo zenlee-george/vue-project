@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row pt-5">
             <h2 class="skills-heading headings">Skills</h2>
-            <p class="subtext pt-5">"What I do have are a very particular set of skills..."</p>
+            <p class="subtext pt-5">"This is my skill set"</p>
         </div>
         <div class="row d-flex justify-content-center pt-5">
             
             <div class="col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
                 <div class="tech skill-divs">
                     <h4 class="pb-4">Development Arsenal</h4>
-                    <p>These are the technologies i am proficient in. With these in my locker, I'm able to build pixel-perfect functional websites.</p>
+                    <p>These are the technologies i am proficient in. With these in my aresenal, I'm able to build functional websites.</p>
                     <p v-for="tech in skills" :key="tech.name"><img :src=tech.icon alt="logo" loading="lazy" class="stack"> {{ tech.name }}</p>
                 </div>
                 <div class="line-container">
@@ -18,20 +18,12 @@
 
             </div>
             <div class="col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
-                <div class="design skill-divs">
-                    <h4 class="pb-4">Design Tools</h4>
-                    <p>I use these platforms to plan beautiful designs or create exciting content leading to satisfying, unique user experiences. </p>
-                    <p v-for="tool in designSkills" :key="tool.name"><span><img :src=tool.icon alt="logo" loading="lazy"></span> {{ tool.name }}</p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
                 <div class="line-container">
-        <div class="line"></div>
     </div>
 
                 <div class="soft skill-divs">
                     <h4 class="pb-4">Soft Skills</h4>
-                    <p>The underrated "soft" skills. Without these my technical expertise would only take me so far. I continue to hone them alongside my tech stack.</p>
+                    <p>Techincal expertise can only take you so far so i have these "soft" skills. I continue to hone these skills daily.</p>
                     <p v-for="skill in softSkills" :key="skill.name">{{ skill.name }}</p>
                 </div>
             </div>
@@ -81,8 +73,8 @@ export default {
 }
 
 .skills-heading {
-  color: #ff005e;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0);
+    color: orangered;
+    text-shadow: 2px 2px 4px #000, 5px 5px 70px yellow;
 }
 
     .row {
@@ -132,7 +124,7 @@ export default {
     top: 0;
     width: 100%;
     height: 80vh;
-    background: linear-gradient(to bottom, #ff005e, rgba(251, 255, 0));
+    background: linear-gradient(to bottom,orangered, green);
     animation: moveDown 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
 
