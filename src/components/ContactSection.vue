@@ -7,9 +7,6 @@
 
         <div class="row">
             <div class="col">
-                <div class="spline-contact">
-                    <iframe src='https://my.spline.design/cybermannequin-013efb57449009f300fec795056b9482/' frameborder='0' width='100%' height='100%'></iframe>
-                </div>
             </div>
             <div class="col">
                 <div class="form-div container pb-5">
@@ -36,11 +33,11 @@
                     <p>Reach out via...</p>
                 </div>
                 <div class="socials">
-                    <a id="profile-link" href="https://github.com/caleb-okkers" target="_blank" class="btn contact-details">
+                    <a id="profile-link" href="https://github.com/zenlee-george" target="_blank" class="btn contact-details">
                         <i class="fab fa-github fa-2xl"></i>
                         GitHub
                     </a>
-                    <a id="profile-link" href="https://www.linkedin.com/in/caleb-okkers-43b100287" target="_blank" class="btn contact-details">
+                    <a id="profile-link" href="https://www.linkedin.com/in/zen-george-674a91317/" target="_blank" class="btn contact-details">
                         <i class="fab fa-linkedin fa-2xl"></i>
                         LinkedIn
                     </a>
@@ -103,7 +100,7 @@ export default {
             return emailRegex.test(email);
         },
         submitToFormspree() {
-            const formUrl = 'https://formspree.io/f/mzzpbkpy'; 
+            const formUrl = 'https://formspree.io/f/moqgyaay'; 
             fetch(formUrl, {
                 method: 'POST',
                 headers: {
@@ -134,8 +131,8 @@ export default {
 
 <style scoped>
   .contact-heading {
-  color: #fff;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px cyan;
+    color: orangered;
+    text-shadow: 2px 2px 4px #000, 5px 5px 70px yellow;
 }
 
 .contact-video {
@@ -147,11 +144,6 @@ export default {
     transform: translateZ(-1px) scale(2);
 }
 
-iframe {
-    width: 600px;
-    height: 600px;
-}
-
 .form-div {
     width: 600px;
     height: 450px;
@@ -159,21 +151,10 @@ iframe {
 
 @media (max-width:475px) {
 
-    iframe {
-        width: 300px;
-        height: 300px
-    }
-
     .form-div {
         width: 100% !important;
         margin: 0 12px;
         padding-left: 0px ;
-    }
-
-    .spline-contact {
-        width: 100% !important;
-        padding-right: 12px;
-        
     }
 
     .socials {
