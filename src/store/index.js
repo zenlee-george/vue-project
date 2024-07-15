@@ -1,5 +1,7 @@
 import { createStore } from 'vuex'
-const portfolioURL = 'https://github.com/zenlee-george/first_api/blob/main/data/index.json'
+import axios from 'axios'
+import Swal from 'sweetalert2/dist/sweetalert2'
+const portfolioURL = 'https://zenlee-george.github.io/first_api/data/index.json'
 
 export default createStore({
   state: {
@@ -9,7 +11,9 @@ export default createStore({
     projects: null,
     testimonials: null,
     skills: null,
-    softSkills: null,
+    hobbies: null,
+    designSkills: null,
+    softSkills: null
   },
   getters: {
   },
@@ -20,44 +24,216 @@ export default createStore({
     setAboutMe(state, payload) {
       state.aboutMe = payload
     },
-    setEducation(state, payload) {
+    setHobbies(state, payload) {
+      state.hobbies = payload
+    },
+    setEducation(state,payload) {
       state.education = payload
     },
-    setWork(state, payload) {
+    setWork(state,payload) {
       state.work = payload
     },
-    setProjects(state, payload) {
+    setProjects(state,payload) {
       state.projects = payload
     },
-    setTestimonials(state, payload) {
+    setTestimonials(state,payload) {
       state.testimonials = payload
     },
-    setSkills(state, payload) {
+    setSkills(state,payload) {
       state.skills = payload
     },
-    setSoftSkills(state, payload) {
-      state.softSkills = payload
+    setDesignSkills(state,payload) {
+      state.designSkills = payload
     },
-  },
-  actions: {
-    async fetchPortfolio({ commit }) {
-      try {
-        const response = await fetch(portfolioURL)
-        const data = await response.json()
-        const { education, aboutMe, work, projects, testimonials, skills, softSkills } = data
-  
-        commit('setEducation', education)
-        commit('setAboutMe', aboutMe)
-        commit('setWork', work)
-        commit('setProjects', projects)
-        commit('setTestimonials', testimonials)
-        commit('setSkills', skills)
-        commit('setSoftSkills', softSkills)
-      } catch (error) {
-        console.error('Error fetching portfolio data:', error)
-      }
+    setSoftSkills(state,payload) {
+      state.softSkills = payload
     }
   },
-  modules: {
+  actions: {
+    async getJobTitle(context){
+      try {
+        let {jobTitle} = (await axios.get(portfolioURL)).data
+        context.commit('setJobTitle', jobTitle)
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getAboutMe(context){
+      try {
+        let {aboutMe} =  (await axios.get(portfolioURL)).data
+        
+        context.commit('setAboutMe', aboutMe)
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+      // let converted = await fetchedInfo.json()
+      // console.log(converted.aboutMe);
+      // context.commit('setAboutMe', converted.aboutMe)
+    },
+    async getHobbies(context){
+      try {
+        let {hobbies} = (await axios.get(portfolioURL)).data
+        context.commit('setHobbies', hobbies)
+        
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getEducation(context){
+      try {
+        let {education} = (await axios.get(portfolioURL)).data
+        context.commit('setEducation', education)
+        
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getWork(context){
+      try {
+        let {work} = (await axios.get(portfolioURL)).data
+        context.commit('setWork', work)
+        
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getSkills(context){
+      try {
+        let {skills} = (await axios.get(portfolioURL)).data
+        context.commit('setSkills', skills )
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getProjects(context){
+      try {
+        let {projects} = (await axios.get(portfolioURL)).data
+        context.commit('setProjects', projects)
+        
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getTestimonials(context){
+      try {
+        let {testimonials} = (await axios.get(portfolioURL)).data
+        context.commit('setTestimonials', testimonials)
+        
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getDesignSkills(context){
+      try {
+        let {designSkills} = (await axios.get(portfolioURL)).data
+        context.commit('setDesignSkills', designSkills)
+        
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    },
+    async getSoftSkills(context){
+      try {
+        let {softSkills} = (await axios.get(portfolioURL)).data
+        context.commit('setSoftSkills', softSkills)
+        
+      }catch(e) {
+        Swal.fire({
+          title: "Error",
+          text: "Failed to fetch data",
+          icon: "error",
+          timer: 2000
+        })
+      }
+    }
+    
+
+    
+
+
+
+
+
+
+
+    // async getEducation(context){
+    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
+    //   let converted = await fetchedInfo.json()
+    //   // console.log(converted.education);
+    //   context.commit('setEducation', converted.education)
+    // },
+    // async getWork(context){
+    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
+    //   let converted = await fetchedInfo.json()
+    //   // console.log(converted.work);
+    //   context.commit('setWork', converted.work)
+    // },
+    // async getSkills(context){
+    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
+    //   let converted = await fetchedInfo.json()
+    //   // console.log(converted.skills);
+    //   context.commit('setSkills', converted.skills)
+    // },
+    // async getProjects(context){
+    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
+    //   let converted = await fetchedInfo.json()
+    //   // console.log(converted.projects);
+    //   context.commit('setProjects', converted.projects)
+    // },
+    // async getTestimonials(context){
+    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
+    //   let converted = await fetchedInfo.json()
+    //   // console.log(converted.testimonials);
+    //   context.commit('setTestimonials', converted.testimonials)
+    // }
   },
+  modules: {
+  }
 })
+
+

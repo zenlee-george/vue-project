@@ -1,25 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
-  html {
-    overflow-x: hidden;
-    max-width: 100%;
-    scrollbar-width: none;
-  }
-  body::-webkit-scrollbar {
+}
+
+/* universal selector */
+body::-webkit-scrollbar {
     display: none;
-  }
-  body {
-    width: cover;
-    background-color: #111;
-    overflow-x: hidden;
-    max-width: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+}
+
+main {
+    margin-left: 5rem;
+}
+
+
+section {
+    min-height: 100vh;
+}
+
+#home, #about, #resume, #skills, #projects, #testimonials,#contact {
+    position: relative;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+}
+
+
+/* from appview */
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color:  rgb(29, 29, 29) ;
   }
 
-  #app {
-    font-family: "Cormorant Garamond", serif;
+/* ease in */
+
+@keyframes easeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
   }
+
+   
+
+
+/* wrapper */
+
+
+
+footer {
+    color: #fff;
+    background: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+}
+
+footer p {
+    padding-top: 2rem;
+}
+
+/* section */
+
+
+
+/* media query */
+
+@media (max-width: 800px) {
+    #home .row {
+        display: block;
+        height: auto;
+    }
+
+    .container {
+        width: 100vw !important;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .headings {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:475px) {
+    .container {
+        width: 100vw !important;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .headings {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    main {
+        margin: 0;
+      }
+}
+
+
+
+
+/* home */
+
+:root {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+}
+
+html {
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: auto;
+}
+
+body {
+    min-height: 100vh;
+    background: #020202;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+ #about {
+    position: relative;
+    
+    min-height: 100vh;
+    transform-style: preserve-3d;
+    
+}
+
+
+.headings {
+    font-family: "Orbitron", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+/* about */
+
+#about {
+    background: #020202;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#about .text {
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;
+    text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+#about p {
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+}
+
+#about .par {
+    padding-top: 2rem;
+}
+
+#about .info {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#about h5 {
+    font-family: "Poppins";
+}
+
+
+/* resume */
+
+#resume {
+    background: #020202;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#resume .text {
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;
+    text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
+
+#resume p {
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+}
+
+/* skills */
+
+
+#skills {
+    background: #020202;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#skills .text {
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;
+    text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
+
+#skills p {
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+}
+
+
+/* projects */
+
+#projects {
+    background: #020202;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+#projects .text {
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
+
+#projects p {
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+}
+
+#projects h5 {
+    font-family: "Poppins";
+}
+
+/* Testimonials */
+
+#testimonials {
+    background: #020202;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#testimonials .text {
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw;text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
+
+#testimonials p {
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#testimonials h5 {
+    font-family: "Poppins";
+}
+
+/* contact */
+
+#contact {
+    background: #020202;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+#contact .text {
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3vw; text-shadow: 2px 2px 5px #DAA520, 5px 5px 70px rgba(255, 255, 255, 0.3);
+}
+
+#contact p,
+#contact label {
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+}
+
+#contact input,
+#contact textarea {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-style: normal;
+    border-radius: 0px 20px;
+}
+
+#contact button {
+    background-color: #fff;
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-shadow: 0 0 15px cyan;
+}
+
+#contact i {
+    color: #fff;
+}
+
+#contact a {
+    color:#fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#contact a:hover,
+#contact i:hover {
+    color: cyan
+}
