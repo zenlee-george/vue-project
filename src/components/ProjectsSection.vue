@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row pt-5">
             <h2 class="project-heading headings">Projects</h2>
-            <p class="subtext pt-5">Have a look at some of my projects...</p>
+            <p class="subtext pt-5">Here are some of my projects...</p>
         </div>
         <div class="row d-flex justify-content-center">
                 <Card v-for="project in projects " :key="project.name"  styleType="projects-style">
@@ -69,8 +69,8 @@ export default {
 
 
 .project-heading {
-  color: #772aff;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px #2196F3;
+    color: orangered;
+    text-shadow: 2px 2px 4px #000, 5px 5px 70px yellow;
 }
 
 .container {
