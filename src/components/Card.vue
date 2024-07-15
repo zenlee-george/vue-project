@@ -174,7 +174,7 @@
   
   .box.about-style::before,
   .box.about-style::after {
-      background: linear-gradient(235deg, #ff005e, #010615, #fbff00) !important;
+      background: linear-gradient(235deg, green, black, orangered) !important;
       
   }
   

@@ -57,8 +57,8 @@ export default {
 
 
 .about-heading {
-  color: #ff005e;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px rgba(251, 255, 0);
+  color: orangered;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px yellow;
 }
 
 .hobbies {
