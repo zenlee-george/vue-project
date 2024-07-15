@@ -39,6 +39,7 @@
   font-weight: 200;
 }
 .copyright {
+  padding-left: 10px;
   font-size: clamp(10px, 5vw, 14px);
   flex: 1;
   text-align: left;
