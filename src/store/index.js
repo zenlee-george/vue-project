@@ -191,46 +191,6 @@ export default createStore({
         })
       }
     }
-    
-
-    
-
-
-
-
-
-
-
-    // async getEducation(context){
-    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
-    //   let converted = await fetchedInfo.json()
-    //   // console.log(converted.education);
-    //   context.commit('setEducation', converted.education)
-    // },
-    // async getWork(context){
-    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
-    //   let converted = await fetchedInfo.json()
-    //   // console.log(converted.work);
-    //   context.commit('setWork', converted.work)
-    // },
-    // async getSkills(context){
-    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
-    //   let converted = await fetchedInfo.json()
-    //   // console.log(converted.skills);
-    //   context.commit('setSkills', converted.skills)
-    // },
-    // async getProjects(context){
-    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
-    //   let converted = await fetchedInfo.json()
-    //   // console.log(converted.projects);
-    //   context.commit('setProjects', converted.projects)
-    // },
-    // async getTestimonials(context){
-    //   let fetchedInfo = await fetch('https://caleb-okkers.github.io/first_api/data/')
-    //   let converted = await fetchedInfo.json()
-    //   // console.log(converted.testimonials);
-    //   context.commit('setTestimonials', converted.testimonials)
-    // }
   },
   modules: {
   }
