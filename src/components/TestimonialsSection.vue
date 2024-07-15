@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <div class="row pt-5">
-            <h2 class="test-heading headings">Testimonials</h2>
+            <h2 class="testimonial-heading headings">Testimonials</h2>
             <p class="subtext pt-5">What people have to say...</p>
         </div>
         <div class="row d-flex justify-content-center">
                 <Card v-for="test in testimonials " :key="test.name" styleType="test-style">
                     <template #img>
-                        <img :src= test.image alt="colleague" loading="lazy">
+                        <img :src= test.image alt="Testimonials" loading="lazy">
                     </template>
                     <template #content>
                         <h5>{{ test.name }}</h5>
@@ -48,9 +48,9 @@ export default {
     width: 100% !important;
 }
 
-.test-heading {
-  color: #89ff00;
-  text-shadow: 2px 2px 4px #000, 5px 5px 70px #00bcd4;
+.testimonial-heading {
+    color: orangered;
+    text-shadow: 2px 2px 4px #000, 5px 5px 70px yellow;
 }
 
 .container {
