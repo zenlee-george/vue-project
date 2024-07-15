@@ -2,7 +2,7 @@
     <div class="container" id="education-section">
       <div class="row pt-5">
         <h2 class="edu-heading headings">Education</h2>
-        <p class="subtext pt-5">I believe that knowledge is power ... but wisdom is how to use it.</p>
+        <p class="subtext pt-5">I believe that intelligence is capability ... but sagacity is how to utilize it</p>
       </div>
       <div class="row">
         <div class="col d-flex justify-content-center">
@@ -55,8 +55,8 @@ mounted() {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 .edu-heading {
-color: #772aff;
-text-shadow: 2px 2px 4px #000, 5px 5px 70px #2196F3;
+  color: orangered;
+  text-shadow: 2px 2px 4px #000, 5px 5px 70px yellow;
 }
 
 .timeline {
@@ -163,7 +163,7 @@ font-family: 'Poppins', sans-serif;
 border: 3px solid;
 border-image-slice: 1;
 border-width: 3px;
-border-image-source: linear-gradient(235deg, #772aff, #b6b2b2, #772aff);
+border-image-source: linear-gradient(235deg, green,#b6b2b2, orangered);
 width: 400px;
 box-shadow: 0 0 10px #2196F3;
 }
@@ -211,7 +211,7 @@ top: 28px;
 z-index: 1;
 border-top: 15px solid transparent;
 border-bottom: 15px solid transparent;
-border-left: 15px solid #772aff;
+border-left: 15px solid green;
 right: -15px;
 }
 
@@ -223,7 +223,7 @@ top: 28px;
 z-index: 1;
 border-top: 15px solid transparent;
 border-bottom: 15px solid transparent;
-border-right: 15px solid #772aff;
+border-right: 15px solid green;
 left: -15px;
 }
 
@@ -233,7 +233,7 @@ left: -15px;
 }
 
 .timeline::after {
-  left: 25px; /* Adjust position of the timeline line */
+  left: 25px; 
 }
 
 .timeline-container {
@@ -292,7 +292,7 @@ border-right: 15px solid #b6b2b2;
 }
 
 .timeline::after {
-  left: 25px; /* Adjust position of the timeline line */
+  left: 25px; 
 }
 
 .timeline-container {
