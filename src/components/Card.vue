@@ -189,7 +189,7 @@
   
   .box.projects-style::before,
   .box.projects-style::after {
-      background: linear-gradient(235deg, #772aff, #010615, #2196F3) !important;
+      background: linear-gradient(235deg, orangered, #010615, green) !important;
   }
   
   
