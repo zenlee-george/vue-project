@@ -204,17 +204,13 @@
   
   .box.test-style::before,
   .box.test-style::after {
-      background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+      background: linear-gradient(235deg, orangered, #010615, green);
   }
   
   
-  /* @media (max-width:400px) {
-    
-  } */
   
   @media (max-width: 330px) {
       .box {
-          /* height: 230px; */
           width: 230px;
           height: 230px;
       }

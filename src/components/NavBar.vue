@@ -55,13 +55,13 @@
      </li>
      <li class="nav-item">
        <a href="#projects" class="nav-link">
-         <i class="fa-solid fa-display"></i>
+         <i class="fa fa-folder"></i>
          <span class="link-text">Projects</span>
        </a>
      </li>
      <li class="nav-item">
        <a href="#testimonials" class="nav-link">
-         <i class="fa-solid fa-people-group"></i>
+         <i class="fa fa-user-circle"></i>
          <span class="link-text">Testimonials</span>
        </a>
      </li>
@@ -121,7 +121,7 @@ color: #fff;
 }
 
 .nav-link i:hover {
-color: rgb(21, 200, 200);
+color: orangered
 
 }
 
@@ -134,12 +134,12 @@ display: block;
 }
 
 .navbar:hover .link-text:hover {
-color: rgb(21, 200, 200);
+color: orangered
 }
 
 .nav-link:hover i,
 .nav-link:hover .link-text {
-color: rgb(21, 200, 200);
+color: orangered
 }
 
 
