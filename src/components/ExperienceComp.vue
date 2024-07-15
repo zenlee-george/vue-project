@@ -2,7 +2,7 @@
     <div class="container" id="experience-section">
       <div class="row pt-5">
         <h2 class="exp-heading headings">Experience</h2>
-        <p class="subtext pt-5">It's not about the destination ... it's about the experience.</p>
+        <p class="subtext pt-5">It's not about the reward... it's about the effort</p>
       </div>
       <div class="row">
         <div class="col d-flex justify-content-center">
